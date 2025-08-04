@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Activity Game</title>
+    <link rel="stylesheet" href="game_style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="rules-section">
+            <h1>Yay! She said YES! 💕</h1>
+            <p>Now let's play a fun guessing game to discover our date activities!</p>
+            
+            <div class="rules-box">
+                <h2>🎮 How to Play:</h2>
+                <ul>
+                    <li>🔤 <strong>Guess letters</strong> to reveal the hidden word</li>
+                    <li>❌ <strong>Wrong guesses</strong> will slowly reveal the activity image</li>
+                    <li>✅ <strong>Complete the word</strong> to move to the next level</li>
+                    <li>💖 <strong>3 levels total</strong> - each one is a date activity!</li>
+                    <li>🏆 <strong>Finish all levels</strong> for a special surprise</li>
+                </ul>
+                <button id="start-game-btn">Start the Game! 🎯</button>
+            </div>
+        </div>
+        
+        <div id="game-content" style="display: none;">
+            <h1 id="game-title">Let's Play a Game!</h1>
+            <p id="game-instruction">Guess what we're going to do on our date!</p>
+            
+            <div class="game-area">
+            <div class="image-container">
+                <img id="activity-image" src="" alt="Activity" style="display: none;">
+                <div id="image-overlay"></div>
+            </div>
+            
+            <div class="word-display">
+                <div id="word-container"></div>
+            </div>
+            
+            <div class="guess-section">
+                <input type="text" id="letter-input" maxlength="1" placeholder="Enter a letter">
+                <button id="guess-button">Guess</button>
+            </div>
+            
+            <div class="wrong-letters">
+                <p>Wrong letters: <span id="wrong-letters-display"></span></p>
+            </div>
+            
+            <div class="level-info">
+                <p>Level: <span id="current-level">1</span> / 3</p>
+            </div>
+            
+            <div id="level-complete" style="display: none;">
+                <h2>🎉 Level Complete! 🎉</h2>
+                <p>Great job! You guessed the word!</p>
+                <button id="next-level-btn">Next Level →</button>
+            </div>
+        </div>
+        
+        <div id="completion-message" style="display: none;">
+            <h2>Thank you! ❤️</h2>
+            <p>Now for the final surprise...</p>
+            <img src="smooch.png" alt="Smooch" class="final-image">
+        </div>
+        </div>
+    </div>
+    
+    <script src="game_script.js"></script>
+</body>
+</html>
